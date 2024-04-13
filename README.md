@@ -1,3 +1,32 @@
+# Description
+
+Here some of my VIM configuration files:
+  * basic.vimrc - Some general settings useful for editing any file.
+  * cpp.vimrc - Incomplete minimalistic config for building and running simple C++ programs.
+  * vimrc - More advanced config for C++, which requires additional configuration for special plugins usage.
+
+To load and apply settings from particular config file the following command can be used in VIM
+```
+: source path_to_config_file
+```
+
+# basic.vimrc
+
+Provides the following key combinations to enable/disable features:
+  * \ + t - Toggle tabs or spaces usage for padding (tabs by default).
+  * \ + q - Close current buffer. When used on last buffer it will open new blank buffer.
+  * \ + s - Toggle the display of invisible characters.
+  * \ + n - Toggle the display of line numbers.
+  * F2 - Save file
+
+Where '\\' is the default "leader" symbol, which can be reconfigured.
+
+# cpp.vimrc
+
+Supports the following key combinations:
+  * F4 - Switch between header and source files.
+  * F9 - Save, build and run.
+
 # vimrc
 
 ## Install
