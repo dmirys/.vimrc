@@ -3,14 +3,15 @@
 Here some of my VIM configuration files:
   * basic.vimrc - Some general settings useful for editing any file.
   * cpp.vimrc - Incomplete minimalistic config for building and running simple C++ programs.
-  * vimrc - More advanced config for C++, which requires additional configuration for special plugins usage.
+  * ide.vimrc - Configure VIM as IDE (preferably for C++, but other languages are also supported).
+  * vimrc - Just an entry point for VIM, which loads all other configs to build IDE.
 
 To load and apply settings from particular config file the following command can be used in VIM
 ```
 : source path_to_config_file
 ```
 
-# basic.vimrc
+## basic.vimrc
 
 Provides the following key combinations to enable/disable features:
   * \ + t - Toggle tabs or spaces usage for padding (tabs by default).
@@ -21,29 +22,26 @@ Provides the following key combinations to enable/disable features:
 
 Where '\\' is the default "leader" symbol, which can be reconfigured.
 
-# cpp.vimrc
+## cpp.vimrc
 
 Supports the following key combinations:
   * F4 - Switch between header and source files.
   * F9 - Save, build and run.
 
-# vimrc
+## ide.vimrc
 
-## Install
+Uses additional VIM plugins to configure VIM as IDE. Requires some initial setup.
 
-Setup Vundle using instructions from https://github.com/VundleVim/Vundle.vim
+# Install
 
-Apply .vimrc
-> \$ cp vimrc ~/.vimrc
+Install these configs:
+> git clone https://github.com/dmirys/vimrc.git ~/.vim
 
-Run vim and input the following command to install all the plugins listed in the .vimrc
-> :PluginInstall
+Usage of `vimrc` and `ide.vimrc` requires some setup.
 
-Setup YouCompleteMe using the instructions from https://github.com/Valloric/YouCompleteMe. On 32 bit system the following error may occur on the execution of ./install.py --clang-completer:
-> CMake Error at ycm/CMakeLists.txt:76 (message):
-  No prebuilt Clang 6.0.0 binaries for 32-bit Linux.  You'll have to compile
-  Clang 6.0.0 from source.  See the YCM docs for details on how to use a
-  user-compiled libclang.
+Set up [Vundle](https://github.com/VundleVim/Vundle.vim):
+> git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-If libclang already installed just run:
-> ./install.py --clang-completer --system-libclang
+Configure plugins:
+> vim +PluginInstall +qall
+

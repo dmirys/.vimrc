@@ -11,6 +11,10 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
+" Enable mouse in all modes, e.g. to easily switch tabs
+" To copy/paste with mouse you have to hold Shift
+set mouse=a
+
 " Turn on syntax highlighting
 syntax on
 
