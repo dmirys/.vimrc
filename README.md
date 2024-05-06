@@ -45,3 +45,9 @@ Set up [Vundle](https://github.com/VundleVim/Vundle.vim):
 Configure plugins:
 > vim +PluginInstall +qall
 
+# Adding new plugins
+
+Vundle is legacy, but still popular, package manager for VIM. It's built-in function `:PluginSearch`
+does not search anything. Available scripts now can be found on https://www.vim.org/scripts/.
+Than concrete script name can be added to ide.vimrc.
+

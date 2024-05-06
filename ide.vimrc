@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Filesystem tree browser
 " More info at https://github.com/valsorym/scrooloose-nerdtree
 Plugin 'scrooloose/nerdtree'
-
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,4 +34,5 @@ filetype plugin indent on    " required
 source ~/.vim/basic.vimrc
 source ~/.vim/cpp.vimrc
 source ~/.vim/plugins.cfg/nerdtree.vimrc
+source ~/.vim/plugins.cfg/YouCompleteMe.vimrc
 
