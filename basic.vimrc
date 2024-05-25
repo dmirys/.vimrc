@@ -27,6 +27,9 @@ set smartindent
 " Wrap line at N chars
 set textwidth=120
 
+" Show line numbers
+set number
+
 " Highlight matching braces
 set showmatch
 
